@@ -1,0 +1,513 @@
+
+.find-jobs-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.find-jobs-page .jobseeker-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #f1e3d5;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.find-jobs-page .jobseeker-logo {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 28px 25px;
+  color: #333;
+}
+
+.find-jobs-page .jobseeker-logo span {
+  color: #f28c28;
+}
+
+.find-jobs-page .jobseeker-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  gap: 8px;
+}
+
+.find-jobs-page .jobseeker-menu-item {
+  text-decoration: none;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.find-jobs-page .jobseeker-menu-item:hover,
+.find-jobs-page .jobseeker-menu-item.active {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+.find-jobs-page .jobseeker-logout-btn {
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.find-jobs-page .jobseeker-logout-btn:hover {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.find-jobs-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 45px;
+}
+
+.find-jobs-header {
+  margin-bottom: 30px;
+}
+
+.find-jobs-header p {
+  color: #ed7d20;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.find-jobs-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #252525;
+}
+
+.find-jobs-header span {
+  display: block;
+  margin-top: 8px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ================= JOB LIST ================= */
+
+.find-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.find-job-card {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 14px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.find-job-card:hover {
+  border-color: #f4bd88;
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.find-job-info {
+  flex: 1;
+}
+
+.find-job-info h2 {
+  margin: 0 0 8px;
+  color: #292929;
+  font-size: 21px;
+}
+
+.find-company {
+  margin: 0 0 15px;
+  color: #ed7d20;
+  font-weight: 600;
+}
+
+.find-job-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #666;
+  font-size: 14px;
+}
+
+.find-job-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-job-btn,
+.find-apply-btn {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-job-btn {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+.save-job-btn:hover {
+  background: #ffe1c2;
+}
+
+.find-apply-btn {
+  background: #f28c28;
+  color: #ffffff;
+}
+
+.find-apply-btn:hover {
+  background: #df7415;
+}
+
+
+/* ================= NO JOBS ================= */
+
+.no-jobs {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 14px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.no-jobs h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.no-jobs p {
+  color: #777;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+  .find-jobs-page .jobseeker-sidebar {
+    width: 210px;
+  }
+
+  .find-jobs-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 30px;
+  }
+
+  .find-job-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .find-jobs-page {
+    display: block;
+  }
+
+  .find-jobs-page .jobseeker-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .find-jobs-content {
+    margin-left: 0;
+    width: auto;
+    padding: 25px;
+  }
+
+  .find-job-actions {
+    width: 100%;
+  }
+
+  .save-job-btn,
+  .find-apply-btn {
+    flex: 1;
+  }
+
+}
+
+
+/* ================= MESSAGE POPUP ================= */
+
+.message-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+
+/* ================= MESSAGE BOX ================= */
+
+.message-box {
+  width: 520px;
+  max-width: 100%;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  padding: 28px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.20);
+
+  animation: messagePopup 0.25s ease-out;
+}
+
+
+/* ================= POPUP ANIMATION ================= */
+
+@keyframes messagePopup {
+
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+}
+
+
+/* ================= MESSAGE HEADER ================= */
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+
+.message-header p {
+  margin: 0 0 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #e88932;
+}
+
+
+.message-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+  color: #222;
+}
+
+
+.message-header span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* ================= CLOSE BUTTON ================= */
+
+.message-close-btn {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f7f7f7;
+
+  color: #555;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+
+.message-close-btn:hover {
+  background: #ffe9d5;
+  color: #e88932;
+}
+
+
+/* ================= FORM ================= */
+
+.message-form label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333;
+}
+
+
+.message-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  min-height: 140px;
+
+  padding: 14px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  resize: vertical;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.message-form textarea:focus {
+  border-color: #e88932;
+
+  box-shadow: 0 0 0 3px rgba(232, 137, 50, 0.12);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.message-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+
+.message-cancel-btn,
+.message-send-btn {
+  padding: 11px 20px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.message-cancel-btn {
+  border: 1px solid #ddd;
+
+  background: #fff;
+
+  color: #555;
+}
+
+
+.message-cancel-btn:hover {
+  background: #f5f5f5;
+}
+
+
+.message-send-btn {
+  border: none;
+
+  background: #e88932;
+
+  color: white;
+}
+
+
+.message-send-btn:hover {
+  background: #d87520;
+
+  transform: translateY(-1px);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .message-box {
+    padding: 22px;
+
+    border-radius: 15px;
+  }
+
+  .message-header h2 {
+    font-size: 21px;
+  }
+
+  .message-buttons {
+    flex-direction: column;
+  }
+
+  .message-cancel-btn,
+  .message-send-btn {
+    width: 100%;
+  }
+
+}

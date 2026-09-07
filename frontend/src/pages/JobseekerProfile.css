@@ -1,0 +1,222 @@
+.profile-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.profile-page .jobseeker-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #f1e3d5;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.profile-page .jobseeker-logo {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 28px 25px;
+  color: #333;
+}
+
+.profile-page .jobseeker-logo span {
+  color: #f28c28;
+}
+
+.profile-page .jobseeker-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  gap: 8px;
+}
+
+.profile-page .jobseeker-menu-item {
+  text-decoration: none;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-page .jobseeker-menu-item:hover,
+.profile-page .jobseeker-menu-item.active {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+.profile-page .jobseeker-logout-btn {
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-page .jobseeker-logout-btn:hover {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.profile-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 45px;
+}
+
+.profile-header {
+  margin-bottom: 30px;
+}
+
+.profile-header p {
+  color: #ed7d20;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #252525;
+}
+
+.profile-header span {
+  display: block;
+  margin-top: 8px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 16px;
+  padding: 35px;
+  max-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff0df;
+  color: #ed7d20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-field {
+  border-bottom: 1px solid #f2e7dc;
+  padding: 0 0 18px;
+  margin-bottom: 20px;
+}
+
+.profile-field:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.profile-field label {
+  display: block;
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-field p {
+  margin: 0;
+  color: #333;
+  font-size: 17px;
+}
+
+
+/* ================= LOADING ================= */
+
+.profile-loading {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 16px;
+  padding: 50px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.profile-loading p {
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+  .profile-page .jobseeker-sidebar {
+    width: 210px;
+  }
+
+  .profile-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 30px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .profile-page {
+    display: block;
+  }
+
+  .profile-page .jobseeker-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .profile-content {
+    margin-left: 0;
+    width: auto;
+    padding: 25px;
+  }
+
+}

@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+.post-job-page {
+    min-height: 100vh;
+    background: #fffaf5;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.post-job-container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    border: 1px solid #f2e4d8;
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.post-job-header {
+    margin-bottom: 30px;
+}
+
+.post-job-header p {
+    color: #e98b45;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 8px;
+}
+
+.post-job-header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #292929;
+}
+
+.post-job-header span {
+    display: block;
+    margin-top: 8px;
+    color: #888;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #eaded4;
+    border-radius: 8px;
+    padding: 13px 14px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f4a261;
+    box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.cancel-btn,
+.post-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: white;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.post-btn {
+    background: #f4a261;
+    color: white;
+    border: none;
+}
+
+.post-btn:hover {
+    background: #e98b45;
+}
+
+.cancel-btn:hover {
+    background: #fafafa;
+}
+
+@media (max-width: 700px) {
+
+    .post-job-container {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .post-job-header h1 {
+        font-size: 25px;
+    }
+}

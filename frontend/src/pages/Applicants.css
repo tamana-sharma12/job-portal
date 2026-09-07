@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+.applicants-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  padding: 35px 45px;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.applicants-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.applicants-header p {
+  margin: 0 0 7px;
+  color: #e88946;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.applicants-header h1 {
+  margin: 0;
+  color: #292929;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.applicants-header span {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+  font-size: 15px;
+}
+
+
+/* ================= CARD ================= */
+
+.applicants-card {
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #f1e1d4;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(90, 60, 40, 0.06);
+  overflow: hidden;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #fff4ea;
+}
+
+th {
+  padding: 17px 20px;
+  text-align: left;
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 1px solid #f1e1d4;
+}
+
+td {
+  padding: 18px 20px;
+  color: #555;
+  font-size: 14px;
+  border-bottom: 1px solid #f4eee9;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #fffaf5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* ================= CANDIDATE ================= */
+
+.candidate {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.candidate-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f29a52;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.candidate strong {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.candidate small {
+  display: block;
+  color: #999;
+  font-size: 12px;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* New */
+
+.status.new {
+  background: #fff3df;
+  color: #d9852d;
+}
+
+/* Shortlisted */
+
+.status.shortlisted {
+  background: #eaf7ee;
+  color: #3c9b5f;
+}
+
+/* Rejected */
+
+.status.rejected {
+  background: #fff0ee;
+  color: #d95c4c;
+}
+
+/* Under Review */
+
+.status.under {
+  background: #f1edff;
+  color: #7558b8;
+}
+
+
+/* ================= NO APPLICANTS ================= */
+
+.no-applicants {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 15px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .applicants-page {
+    padding: 25px 15px;
+  }
+
+  .applicants-header h1 {
+    font-size: 28px;
+  }
+
+  .applicants-card {
+    border-radius: 12px;
+  }
+
+  th,
+  td {
+    padding: 14px 15px;
+  }
+
+}

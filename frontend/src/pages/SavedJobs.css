@@ -1,0 +1,241 @@
+.saved-jobs-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.saved-jobs-page .jobseeker-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #f1e3d5;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.saved-jobs-page .jobseeker-logo {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 28px 25px;
+  color: #333;
+}
+
+.saved-jobs-page .jobseeker-logo span {
+  color: #f28c28;
+}
+
+.saved-jobs-page .jobseeker-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  gap: 8px;
+}
+
+.saved-jobs-page .jobseeker-menu-item {
+  text-decoration: none;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saved-jobs-page .jobseeker-menu-item:hover,
+.saved-jobs-page .jobseeker-menu-item.active {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+.saved-jobs-page .jobseeker-logout-btn {
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: #555;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.saved-jobs-page .jobseeker-logout-btn:hover {
+  background: #fff0df;
+  color: #ed7d20;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.saved-jobs-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 45px;
+}
+
+.saved-jobs-header {
+  margin-bottom: 30px;
+}
+
+.saved-jobs-header p {
+  color: #ed7d20;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.saved-jobs-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #252525;
+}
+
+.saved-jobs-header span {
+  display: block;
+  margin-top: 8px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ================= SAVED JOBS ================= */
+
+.saved-jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.saved-job-card {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.saved-job-card:hover {
+  border-color: #f4bd88;
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.saved-job-info h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+  color: #292929;
+}
+
+.saved-company {
+  margin: 0 0 12px;
+  color: #ed7d20;
+  font-weight: 600;
+}
+
+.saved-job-details {
+  color: #666;
+  font-size: 14px;
+}
+
+.saved-apply-btn {
+  border: none;
+  background: #f28c28;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saved-apply-btn:hover {
+  background: #df7415;
+}
+
+
+/* ================= NO SAVED JOBS ================= */
+
+.no-saved-jobs {
+  background: #ffffff;
+  border: 1px solid #f0dfcf;
+  border-radius: 14px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.no-saved-jobs h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.no-saved-jobs p {
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.no-saved-jobs a {
+  display: inline-block;
+  text-decoration: none;
+  background: #f28c28;
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.no-saved-jobs a:hover {
+  background: #df7415;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .saved-jobs-page .jobseeker-sidebar {
+    width: 210px;
+  }
+
+  .saved-jobs-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 30px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .saved-jobs-page {
+    display: block;
+  }
+
+  .saved-jobs-page .jobseeker-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .saved-jobs-content {
+    margin-left: 0;
+    width: auto;
+    padding: 25px;
+  }
+
+  .saved-job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+}

@@ -1,0 +1,86 @@
+.my-applications-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #fffaf5;
+}
+
+.my-applications-header p {
+    color: #f28c28;
+    font-weight: 600;
+}
+
+.my-applications-header h1 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.my-applications-header span {
+    color: #777;
+}
+
+.applications-card {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #fff3e6;
+    color: #333;
+}
+
+.application-status {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.application-status.new {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.application-status.shortlisted {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.application-status.under-review {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.application-status.interview {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.application-status.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.no-applications {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
