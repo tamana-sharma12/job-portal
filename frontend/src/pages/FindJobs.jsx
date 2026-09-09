@@ -15,8 +15,8 @@ function FindJobs() {
   const [message, setMessage] = useState("");
 
 
-  // ================= GET JOBS =================
-
+ // ================= GET JOBS =================
+ 
   useEffect(() => {
 
     axios
@@ -48,10 +48,7 @@ function FindJobs() {
     navigate("/login");
 
   };
-
-
   // ================= SAVE JOB =================
-
   const handleSaveJob = async (job) => {
 
     try {
@@ -68,7 +65,7 @@ function FindJobs() {
         location: job.location
       });
 
-
+    
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/save-job`,
         {

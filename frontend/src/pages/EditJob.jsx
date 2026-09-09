@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./PostJob.css";
+import { toast } from "react-toastify";
 
 function EditJob() {
 
@@ -62,7 +63,7 @@ function EditJob() {
                 job
             );
 
-            alert(response.data.message);
+            toast.success(response.data.message);
 
             navigate("/my-jobs");
 
@@ -70,7 +71,7 @@ function EditJob() {
 
             console.log(error);
 
-            alert("Job update nahi hui");
+            toast("Job update nahi hui");
 
         }
 
@@ -109,13 +110,7 @@ function EditJob() {
 
                             <label>Job Title</label>
 
-                            <input
-                                type="text"
-                                name="jobTitle"
-                                value={job.jobTitle}
-                                onChange={handleChange}
-                                required
-                            />
+                            <input type="text"name="jobTitle"value={job.jobTitle}onChange={handleChange}required/>
 
                         </div>
 
@@ -124,13 +119,7 @@ function EditJob() {
 
                             <label>Company Name</label>
 
-                            <input
-                                type="text"
-                                name="companyName"
-                                value={job.companyName}
-                                onChange={handleChange}
-                                required
-                            />
+    <input type="text"name="companyName"value={job.companyName}onChange={handleChange}required/>
 
                         </div>
 
@@ -143,13 +132,7 @@ function EditJob() {
 
                             <label>Location</label>
 
-                            <input
-                                type="text"
-                                name="location"
-                                value={job.location}
-                                onChange={handleChange}
-                                required
-                            />
+        <input type="text"name="location"value={job.location}onChange={handleChange}required/>
 
                         </div>
 
@@ -158,13 +141,7 @@ function EditJob() {
 
                             <label>Salary</label>
 
-                            <input
-                                type="text"
-                                name="salary"
-                                value={job.salary}
-                                onChange={handleChange}
-                                required
-                            />
+                            <input type="text"name="salary"value={job.salary}onChange={handleChange}required/>
 
                         </div>
 
