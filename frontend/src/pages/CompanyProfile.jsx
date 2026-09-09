@@ -104,7 +104,7 @@ function CompanyProfile() {
   // ================= LOGOUT =================
 
   const handleLogout = () => {
-
+    
     localStorage.removeItem("login");
     localStorage.removeItem("email");
     localStorage.removeItem("name");
