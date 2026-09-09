@@ -18,11 +18,11 @@ useEffect(() => {
 
   console.log(
     "API URL:",
-    `http://localhost:4000/my-applications/${email}`
+    `${import.meta.env.VITE_API_URL}/my-applications/${email}`
   );
 
   axios
-    .get(`http://localhost:4000/my-applications/${email}`)
+    .get(`${import.meta.env.VITE_API_URL}/my-applications/${email}`)
     .then((response) => {
 
       console.log("My Applications:", response.data);

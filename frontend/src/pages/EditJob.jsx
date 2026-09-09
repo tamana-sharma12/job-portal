@@ -24,7 +24,7 @@ function EditJob() {
     useEffect(() => {
 
         axios
-            .get(`http://localhost:4000/jobs/${id}`)
+            .get(`${import.meta.env.VITE_API_URL}/jobs/${id}`)
             .then((response) => {
 
                 setJob(response.data.job);
@@ -58,7 +58,7 @@ function EditJob() {
         try {
 
             const response = await axios.put(
-                `http://localhost:4000/jobs/${id}`,
+                `${import.meta.env.VITE_API_URL}/jobs/${id}`,
                 job
             );
 

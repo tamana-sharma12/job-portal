@@ -20,7 +20,7 @@ function FindJobs() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:4000/jobs")
+      .get(`${import.meta.env.VITE_API_URL}/jobs`)
       .then((response) => {
 
         console.log("Jobs:", response.data);
@@ -70,7 +70,7 @@ function FindJobs() {
 
 
       const response = await axios.post(
-        "http://localhost:4000/save-job",
+        `${import.meta.env.VITE_API_URL}/save-job`,
         {
           name: name,
           email: email,
@@ -109,7 +109,7 @@ function FindJobs() {
 
 
       const response = await axios.post(
-        "http://localhost:4000/apply-job",
+       `${import.meta.env.VITE_API_URL}/apply-job`,
         {
           name: name,
           email: email,
@@ -191,7 +191,7 @@ const handleSendMessage = async () => {
 
 
     const response = await axios.post(
-      "http://localhost:4000/send-message",
+      "`${import.meta.env.VITE_API_URL}/send-message`",
       {
         senderName: senderName,
         senderEmail: senderEmail,

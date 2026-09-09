@@ -30,7 +30,7 @@ function PostJob() {
         try {
 
             const response = await axios.post(
-                "http://localhost:4000/create-job",
+                `${import.meta.env.VITE_API_URL}/create-job`,
                 job
             );
 

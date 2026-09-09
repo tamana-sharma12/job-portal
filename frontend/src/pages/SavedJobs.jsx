@@ -18,7 +18,7 @@ function SavedJobs() {
     }
 
     axios
-      .get(`http://localhost:4000/saved-jobs/${email}`)
+      .get(`${import.meta.env.VITE_API_URL}/saved-jobs/${email}`)
       .then((response) => {
 
         console.log("Saved Jobs Count:", response.data.savedJobs?.length);

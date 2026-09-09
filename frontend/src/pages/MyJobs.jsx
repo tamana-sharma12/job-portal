@@ -9,7 +9,7 @@ function MyJobs() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/jobs")
+      .get(axios.get(`${import.meta.env.VITE_API_URL}/jobs`))
       .then((response) => {
         setJobs(response.data.jobs);
       })
@@ -31,7 +31,7 @@ function MyJobs() {
   try {
 
     const response = await axios.delete(
-      `http://localhost:4000/jobs/${id}`
+      `${import.meta.env.VITE_API_URL}/jobs/${id}`
     );
 
     alert(response.data.message);

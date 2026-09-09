@@ -28,7 +28,7 @@ function CompanyProfile() {
     }
 
     axios
-      .get(`http://localhost:4000/company-profile/${email}`)
+      .get(`${import.meta.env.VITE_API_URL}/company-profile/${email}`)
       .then((response) => {
 
         console.log("Company Profile:", response.data);
@@ -75,7 +75,7 @@ function CompanyProfile() {
     try {
 
       const response = await axios.put(
-        `http://localhost:4000/company-profile/${email}`,
+        `${import.meta.env.VITE_API_URL}/company-profile/${email}`,
         {
           companyName: company.companyName,
           phone: company.phone,

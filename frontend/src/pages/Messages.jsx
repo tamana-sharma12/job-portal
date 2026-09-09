@@ -23,7 +23,7 @@ function Messages() {
     }
 
     axios
-      .get(`http://localhost:4000/messages/${employerEmail}`)
+      .get(`${import.meta.env.VITE_API_URL}/messages/${employerEmail}`)
       .then((response) => {
 
         console.log("Messages:", response.data);

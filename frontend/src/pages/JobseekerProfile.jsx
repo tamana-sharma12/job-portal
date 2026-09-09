@@ -18,7 +18,7 @@ function JobseekerProfile() {
     }
 
     axios
-      .get(`http://localhost:4000/profile/${email}`)
+      .get(`${import.meta.env.VITE_API_URL}/profile/${email}`)
       .then((response) => {
 
         console.log("Profile:", response.data);

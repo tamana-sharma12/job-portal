@@ -9,8 +9,7 @@ function JobseekerDashboard() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/jobs")
+    axios.get(`${import.meta.env.VITE_API_URL}/jobs`)
       .then((response) => {
         setJobs(response.data.jobs);
       })
@@ -34,18 +33,17 @@ function JobseekerDashboard() {
     try {
       const name = localStorage.getItem("name");
       const email = localStorage.getItem("email");
-
-      const response = await axios.post(
-        "http://localhost:4000/save-job",
-        {
-          name: name,
-          email: email,
-          jobId: job._id,
-          jobTitle: job.jobTitle,
-          companyName: job.companyName,
-          location: job.location
-        }
-      );
+const response = await axios.post(
+  `${import.meta.env.VITE_API_URL}/save-job`,
+  {
+    name: name,
+    email: email,
+    jobId: job._id,
+    jobTitle: job.jobTitle,
+    companyName: job.companyName,
+    location: job.location
+  }
+);  
 
       alert(response.data.message);
 
@@ -68,7 +66,7 @@ function JobseekerDashboard() {
       const email = localStorage.getItem("email");
 
       const response = await axios.post(
-        "http://localhost:4000/apply-job",
+        `${import.meta.env.VITE_API_URL}/apply-job`,
         {
           name: name,
           email: email,
