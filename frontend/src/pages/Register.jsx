@@ -27,11 +27,12 @@ function Register() {
                 }
             );
 
-            alert(response.data.message);
+    
+            toast.success(response.data.message);
 
         } catch (error) {
 
-            alert(
+            toast.warning(
                 error.response?.data?.message ||
                 "Register failed"
             );
@@ -86,9 +87,7 @@ function Register() {
                             type="email"
                             placeholder="Enter your email"
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-
-                        />
+                            onChange={(e) => setEmail(e.target.value)}/>
 
                         <label>Password</label>
 
