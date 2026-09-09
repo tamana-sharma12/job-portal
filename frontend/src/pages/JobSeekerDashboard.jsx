@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./jobseekerDashboard.css";
+import "./JobSeekerDashboard.css";
 
 function JobseekerDashboard() {
   const navigate = useNavigate();
