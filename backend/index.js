@@ -10,7 +10,7 @@ const bcrypt = require("bcrypt");
 const Job = require("./jobSchema");
 const Application = require("./applicationsSchema");
 const SavedJob = require("./savedJobSchema");
-const Message = require("./Message");
+const Message = require("./message");
 require("./db");
 
 const {rateLimit} = require("express-rate-limit")
